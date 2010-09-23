@@ -1,0 +1,33 @@
+%h1.heading
+  = I18n.t("views.admin.users.title")
+= link_to I18n.t("views.admin.users.new_user"), new_resource_path, :class => "emph"
+%table.emph
+  %thead
+    %tr
+      %th
+        = I18n.t("views.admin.users.login")
+      %th
+        = I18n.t("views.admin.users.email")
+      %th
+        = I18n.t("views.admin.users.roles")
+      %th
+        = I18n.t("views.admin.users.city")
+      %th
+        = I18n.t("edit")
+      %th
+        = I18n.t("delete")
+  - for user in @users
+    %tr
+      %td
+        = user.login
+      %td
+        = user.email
+      %td
+        = user.roles.map(&:name).sort.join(', ')
+      %td
+        = user.city_name
+      %td
+        = link_to I18n.t("edit"), edit_resource_path(user)
+      %td
+        = link_to I18n.t("delete"), resource_path(user), :method => :delete, :confirm => "delete user"
+

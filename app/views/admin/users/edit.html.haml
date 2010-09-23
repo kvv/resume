@@ -1,0 +1,12 @@
+%h1.heading
+  = I18n.t("views.admin.users.edit_title")
+  = resource.login
+- semantic_form_for [:admin, resource], :method => :put  do |form|
+  = render :partial => 'form', :object => form
+  - form.inputs do
+    = link_to "Сменить пароль", "", :id => "change_password"
+  %span#passwords
+  - form.buttons do
+    = form.commit_button
+= link_to I18n.t("back"),collection_path
+

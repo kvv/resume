@@ -1,0 +1,10 @@
+%h2
+  = I18n.t("recover_your_password.title")
+%p
+  = I18n.t("recover_your_password.text")
+- form_tag password_resets_path do
+  %label{ :for => "email" }
+  = I18n.t('recover_your_password.email_address')
+  = text_field_tag "email", "", :id => "email"
+  = submit_tag t("recover_your_password.Reset my password"), :class => "submit"
+

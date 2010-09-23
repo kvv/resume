@@ -1,0 +1,10 @@
+%h1.heading
+  = I18n.t("views.admin.users.new_title")
+- semantic_form_for [:admin, resource] do |form|
+  = render :partial => 'form', :object => form
+  - form.inputs do
+    = form.inputs :password, :password_confirmation
+  - form.buttons do
+    = form.commit_button
+= link_to I18n.t("back"),collection_path
+

@@ -7,6 +7,17 @@ RAILS_GEM_VERSION = '2.3.9' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+
+  config.gem "settingslogic", :version => '>=2.0.6'
+  config.gem 'authlogic'
+  config.gem "declarative_authorization"
+  config.gem "inherited_resources", :version => '=1.0.6'
+  config.gem "formtastic"
+  config.gem 'will_paginate'
+  config.gem 'paperclip'
+  config.gem 'haml'
+  config.gem 'russian'
+
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

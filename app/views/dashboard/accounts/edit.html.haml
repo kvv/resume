@@ -1,0 +1,19 @@
+%h1.heading
+  Редактирование учетной записи
+= link_to I18n.t("back"), resource_path
+%h2
+  Электронная почта
+- semantic_form_for(@current_user, :url => dashboard_account_path) do |form|
+  - form.inputs do
+    = form.input :email, :label => "E-mail"
+  - form.buttons do
+    = form.commit_button "Сохранить email"
+%h2
+  Пароль
+- semantic_form_for(@current_user, :url => dashboard_account_path) do |form|
+  - form.inputs do
+    = form.input :password, :label => "Новый пароль"
+    = form.input :password_confirmation, :label => "Повторите пароль"
+  - form.buttons do
+    = form.commit_button "Изменить пароль"
+

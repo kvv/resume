@@ -1,0 +1,7 @@
+= error_messages_for :user
+- form.inputs do
+  = form.inputs :login, :email
+  = form.input :city_name, :as => :select, :collection => City.all.map{|x|[x.ru, x.ru]}
+  = form.input :active
+  = form.input :roles, :as => :check_boxes
+

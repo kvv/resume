@@ -1,0 +1,106 @@
+ru:
+  back: Вернуться
+  actions: Действия
+  edit: Редактировать
+  delete: Удалить
+  logout: Выход
+  login: Вход
+  register: Регистрация
+  views:
+    admin:
+      menu:
+        title: Меню
+        users: Пользователи
+        categories: 'Категории тов.'
+        payments: Платежи
+        tickets: Тикеты
+      users:
+        new_user: Добавить пользователя
+        title: Пользователи
+        new_title: Новый пользователь
+        edit_title: Редактирование пользователя
+        show_title: Пользователь
+        login: "Логин"
+        email: "Почта"
+        roles: "Группы"
+        city: "Город"
+      subdomains:
+        new_subdomain: Добавить субдомен
+        description: Описание
+        title: СубДомены
+        new_title: Новый субдомен
+        edit_title: Редактирование субдомена
+        name: Наименование
+        show_title: Субдомен
+        screens: Экраны
+      advertisements:
+        title: Объекты
+        new_advertisement: Добавить объект
+        name: Наименование
+        description: Описание
+        new_title: Новый объект
+        edit_title: Редактирование объекта
+        decide: Принять/Отклонить
+        status: Статус
+        not_confirmed: Не подтвержденный
+        confirmed: Подтвержденный
+        rejected: Отклонены
+        show_title: Объект
+        reject: Отклонить
+        apply: Принять
+        show:
+          subdomain: Субдомен
+          title: Заголовок
+          desc: Описание
+          advertisement: Объявление
+          status: Статус
+          required_properties: Обязательные параметры
+          optional_properties: Дополнительные параметры
+
+      tickets:
+        index_title: Тикеты
+        new_ticket: Добавить тикет
+        edit_ticket: Редактирование тикета
+        show_ticket: Просмотр тикета
+        title: "Название"
+        body: "Текст"
+        theme: "Тема"
+        state: "Статус"
+        user: "Создал"
+        manage: "Управление"
+      replies:
+        index_replies: Ответы
+        new_reply: Добавить ответ
+        edit_reply: Редактирование ответа
+        body: "Текст"
+        user: "Создал"
+        manage: "Управление"
+      screens:
+        title: Экраны
+        subdomain: Субдомен
+        name: Наименование
+        new_title: Новый экран
+        edit_title: Редактирование
+        add_new_screen: Добавить новый экран
+    dashboard:
+      menu:
+        title: Меню
+        account: Учетная запись
+        tickets: Мои тикеты
+        products: Мои товары
+        magazines: Мои магазины
+        balance: Баланс
+  tickets:
+    states:
+      close: Закрыт
+      open: Открыт
+    themes:
+      complaint: Жалоба
+      finance_issues: Финансовые вопросы
+      technical_issues: Технические вопросы
+      other: Другие
+    actions:
+      close: Закрыть
+      open: Открыть
+      new_ticket: Создать тикет
+

@@ -1,0 +1,12 @@
+%h2
+  = t('recover_your_password.install_password')
+%p
+  = t('recover_your_password.script_password')
+%p
+  = f.label t('recover_your_password.password')
+  %br
+  = f.password_field :password
+%p
+  = f.label t('recover_your_password.password_confirmation')
+  %br
+  = f.password_field :password_confirmation

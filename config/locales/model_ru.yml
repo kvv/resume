@@ -1,0 +1,62 @@
+ru:
+  activerecord:
+    models:
+      user: Пользователь
+      category: Категория товаров
+      magazine: Магазин
+      product: Товар
+      image: Фотография
+      ticket: Тикет
+      reply: Ответ
+      user_session: Вход в систему
+    attributes:
+      user:
+        email: 'E-mail'
+        login: Логин
+        city: Город
+        roles: Роли
+        password: Пароль
+        password_confirmation: Повторите пароль
+      user_session:
+        email: E-mail
+        password: Пароль
+      category:
+        title: 'Название'
+        parent_id: 'Родитель'
+      magazine:
+        title: 'Название'
+        description: 'Описание'
+        city: 'Город'
+        adress: 'Адрес'
+        user_id: 'Владелец'
+        icon: 'Фотография'
+      product:
+        title: Название товара
+        description: Описание
+        category_id: Категория
+        magazine_id: Магазин
+        link: Ссылка
+        icon: Фотография
+        price: Цена, руб
+        old_price: Старая Цена, руб
+      image:
+        title: 'Название'
+        product_id: 'Товар'
+        data: Фотография
+      ticket:
+        title: 'Название'
+        body: 'Текст'
+        state: 'Статус'
+        theme: 'Тема'
+        user_id: 'Владелец'
+      reply:
+        body: 'Текст'
+        ticket_id: 'Тикет'
+        user_id: 'Автор'
+    errors:
+      models:
+        advertisement:
+          required_properties:
+            blank: не должно быть пусто
+            invalid: не правильный формат данных
+

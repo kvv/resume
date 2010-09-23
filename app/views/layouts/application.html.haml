@@ -1,0 +1,78 @@
+!!! Strict
+%html{ "xml:lang" => "ru", :lang => "ru", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title
+      new center
+    %meta{ :content => "text/html; charset=UTF-8", "http-equiv" => "content-type" }
+    %meta{ :name => "keywords", :content => "" }
+    %meta{ :name => "description", :content => "" }
+    = stylesheet_link_tag  "main", "test"
+    = stylesheet_link_tag "formtastic", "formtastic_changes", "jquery-ui"
+    /*= include_stylesheets :workspace, :media => 'all'
+    /*= include_javascripts :workspace
+    = javascript_include_tag 'zoom/eye', 'zoom/layout', 'zoom/utils', 'zoom/zoomimage'
+    = stylesheet_link_tag 'zoom/zoomimage'
+    = javascript_include_tag "jquery", "jquery-ui", "jquery.ui.datepicker-ru"
+    /*= javascript_include_tag "jquery", "jquery-ui"
+    = javascript_include_tag "application"
+  %body
+    #top
+      #topwrap
+        %h1
+          = link_to "Vitrina", root_path
+        = yield :header
+        %ul#menu
+          %li
+            %a.current{ :href => "/" }
+              %span
+                Главная
+          %li
+            %a{ :href => "/resumes.html" }
+              %span
+                Список резюме
+    #content
+      #ajax_indicator(style="display:none; position:absolute; margin-left:-60px;")
+        = image_tag "ajax-loader.gif", :title => I18n.t("download_data")
+      %h2
+        %span
+          = render :partial => 'shared/main_panel'
+        Конструктор резюме - создай своё резюме
+      #main
+        = yield
+        .x
+      #side
+        = yield :product_description
+        = display_standard_flashes
+        - if current_user && current_user.admin?
+          .box
+            %h3
+              Админка
+            = render :partial => 'shared/admin_panel'
+            .x
+          .boxbottom
+        - if current_user
+          .box
+            %h3
+              Панель управления
+            = render :partial => 'shared/user_panel'
+            .x
+          .boxbottom
+        .box
+          %h3
+            Категории товаров
+          .x
+        .boxbottom
+        .box
+          %h3
+            Города
+          .x
+        .boxbottom
+      = yield :news
+      #footer
+        = yield :footer
+        %p#links
+          %a{ :href => "#" }
+            Контакты
+        %p
+          Copyright © 2010 Все права защищены
+

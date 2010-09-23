@@ -1,0 +1,26 @@
+%h1.heading
+  = "Resumes"
+  
+%p.actions
+  = link_to 'New Resume', new_resource_path
+  
+%table
+  %thead.header
+    %tr
+      %th.full_name= 'Full name'
+      %th.birthday= 'Birthday'
+      %th.sex= 'Sex'
+      %th.family= 'Family'
+      %th.education= 'Education'
+      %th.additional_education= 'Additional education'
+      %th.personal_qualities= 'Personal qualities'
+      %th.skills= 'Skills'
+      %th.job= 'Job'
+      %th.experience= 'Experience'
+      %th.additional_information= 'Additional information'
+      %th.actions= 'Actions'
+  %tbody.items.resources
+    - collection.each do |resource|
+      = render 'item', :resource => resource
+      
+= will_paginate(collection)

@@ -1,0 +1,9 @@
+- if current_user
+  - if current_user.admin?
+    = link_to I18n.t("admin"), admin_users_path
+  = link_to I18n.t("dashboard"), dashboard_account_path, :id => "dashboard"
+  = link_to I18n.t("logout"),  logout_path
+- else
+  = link_to I18n.t("login"),  login_path
+  = link_to I18n.t("register"),  signup_path
+

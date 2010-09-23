@@ -1,0 +1,18 @@
+- content_tag_for(:tr, resource, :class => cycle(:odd, :even)) do
+  %td.full_name= h resource.try(:full_name)
+  %td.birthday= h resource.try(:birthday)
+  %td.sex= h resource.try(:sex)
+  %td.family= h resource.try(:family)
+  %td.education= h resource.try(:education)
+  %td.additional_education= h resource.try(:additional_education)
+  %td.personal_qualities= h resource.try(:personal_qualities)
+  %td.skills= h resource.try(:skills)
+  %td.job= h resource.try(:job)
+  %td.experience= h resource.try(:experience)
+  %td.additional_information= h resource.try(:additional_information)
+  %td.actions
+    = link_to 'Show', resource_path(resource)
+    |
+    = link_to 'Edit', edit_resource_path(resource)
+    |
+    = link_to 'Destroy', resource, :confirm => 'Are you sure?', :method => :delete

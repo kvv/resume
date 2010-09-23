@@ -1,0 +1,62 @@
+%h2
+  %span
+    %a{ :href => "http://www.solucija.com/templates/premium" }
+      Смотреть все
+  Одежда
+= javascript_include_tag 'zoom/eye'
+= javascript_include_tag 'zoom/layout'
+= javascript_include_tag 'zoom/utils'
+= javascript_include_tag 'zoom/zoomimage'
+= stylesheet_link_tag 'zoom/zoomimage'
+.x
+%br
+- content_for :news do
+  %h2
+    Что нового?
+  .x
+  .news
+    %p.date
+      %span
+        12
+      %br
+      jan
+    .news-box
+      %h3
+        %a{ :href => "http://www.solucija.com/free-and-simple-ajax-contact-form" }
+          Free and Simple Ajax Contact Form
+      %p
+        We've prepared a simple Ajax / PHP Contact form with Javascript Math Captcha and input fields validation. It's easy to install and configure.
+      %p
+        %a.more{ :href => "http://www.solucija.com/free-and-simple-ajax-contact-form" }
+          читать далее
+  .news
+    %p.date
+      %span
+        08
+      %br
+      jan
+    .news-box
+      %h3
+        %a{ :href => "http://www.solucija.com/new-template-released-lawyerattorney" }
+          New Template Released: Lawyer&amp;Attorney
+      %p
+        Lawyer&amp;Attorney is a clean, light-on-dark template ideal for law firms or to market services on a simple website with a clear pitch line.
+      %p
+        %a.more{ :href => "http://www.solucija.com/new-template-released-lawyerattorney" }
+          Read More
+  .news.last
+    %p.date
+      %span
+        30
+      %br
+      dec
+    .news-box
+      %h3
+        %a{ :href => "http://www.solucija.com/new-template-released-enthusiastica" }
+          New Template Released: Enthusiastica
+      %p
+        Enthusiastica is a clean, blue and purple template ideal to market products or services that require a simple website with a clear pitch line.
+      %p
+        %a.more{ :href => "http://www.solucija.com/new-template-released-enthusiastica" }
+          Read More
+

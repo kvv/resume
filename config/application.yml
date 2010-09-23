@@ -1,0 +1,18 @@
+defaults: &defaults
+  app_name: News center
+  account_activation_time: 3
+  main_domain: localhost.local
+development:
+  <<: *defaults
+  neat_setting: 800
+
+test:
+  <<: *defaults
+  main_domain: example.com
+cucumber:
+  <<: *defaults
+  main_domain: example.com
+production:
+  <<: *defaults
+  main_domain: newscenter.adenin.ru
+

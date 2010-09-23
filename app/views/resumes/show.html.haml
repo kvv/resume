@@ -1,0 +1,31 @@
+%h1.heading
+  = "Resume %s" % resource.id
+  
+- content_tag_for(:dl, resource) do
+  %dt.label= 'Full name'
+  %dd.full_name= h resource.try(:full_name)
+  %dt.label= 'Birthday'
+  %dd.birthday= h resource.try(:birthday)
+  %dt.label= 'Sex'
+  %dd.sex= h resource.try(:sex)
+  %dt.label= 'Family'
+  %dd.family= h resource.try(:family)
+  %dt.label= 'Education'
+  %dd.education= h resource.try(:education)
+  %dt.label= 'Additional education'
+  %dd.additional_education= h resource.try(:additional_education)
+  %dt.label= 'Personal qualities'
+  %dd.personal_qualities= h resource.try(:personal_qualities)
+  %dt.label= 'Skills'
+  %dd.skills= h resource.try(:skills)
+  %dt.label= 'Job'
+  %dd.job= h resource.try(:job)
+  %dt.label= 'Experience'
+  %dd.experience= h resource.try(:experience)
+  %dt.label= 'Additional information'
+  %dd.additional_information= h resource.try(:additional_information)
+  
+%p.actions
+  = link_to 'Edit', edit_resource_path(resource)
+  |
+  = link_to 'Index', collection_path

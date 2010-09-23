@@ -1,0 +1,2 @@
+= select nil, "city", City.all.map{|x|[x.ru, "#{city_path(x.en)}"]}, {}, {:onchange => "$(window.location).attr('href', this.value);"}
+
